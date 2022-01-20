@@ -19,7 +19,7 @@ reverse_morse = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D',
 
 
 def encode_to_morse(text):  # "sos sos" => "... --- ...  ... --- ..."
-    result = ''
+    result = ""
          for i in text.upper().split():
                   result += ' '.join([morse[j] for j in i])
                   result += "  "
