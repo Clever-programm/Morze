@@ -32,12 +32,10 @@ def decode_from_morse(code):  # "... --- ...  ... --- ..." => "sos sos"
     #              result += ' '.join([reverse_morse[j] for j in i]).upper()
     #              result += "  "
     #return code
-    # не работает-^^^
     result = ""
          for i in code.split(' '):
                   result += reverse_morse[i]
     return result
-    # работает-^^^
 
 
 def main():
