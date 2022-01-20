@@ -27,11 +27,17 @@ def encode_to_morse(text):  # "sos sos" => "... --- ...  ... --- ..."
 
 
 def decode_from_morse(code):  # "... --- ...  ... --- ..." => "sos sos"
-    result = ''
-         for i in code.split():
-                  result += ' '.join([reverse_morse[j] for j in i]).upper()
-                  result += "  "
-    return code
+    #result = ''
+    #     for i in code.split():
+    #              result += ' '.join([reverse_morse[j] for j in i]).upper()
+    #              result += "  "
+    #return code
+    # не работает-^^^
+    result = ""
+         for i in code.split(' '):
+                  result += reverse_morse[i]
+    return result
+    # работает-^^^
 
 
 def main():
