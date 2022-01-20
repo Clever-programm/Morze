@@ -41,4 +41,9 @@ def decode_from_morse(code):  # "... --- ...  ... --- ..." => "sos sos"
 
 
 def main():
-    pass
+    while True:
+         answer = input('Хотите ли вы "закодировать" текст или же "декодировать?"')
+         if answer == "закодировать":
+                  print(encode_to_morse(input("Введите текст:")))
+         else:
+                  print(decode_from_morse(input("Введите код:")))
